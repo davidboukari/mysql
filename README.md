@@ -24,7 +24,6 @@ show databases;
 ## Flush root password
 
 ```bash
-#
 systemctl stop mysql
 mysqld_safe --skip-grant-tables &
 mysql -u root
