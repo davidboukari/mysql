@@ -1,5 +1,27 @@
 # mysql
 
+## Install mysql mariadb
+
+* https://blog.microlinux.fr/mysql-centos-7/
+
+```bash
+for file in $(rpm -qa|grep mysql); do yum erase -y $file; done
+rm /var/lib/mysql/*  -fr
+yum install mariadb-server mariadb
+systemctl enable mariadb --now
+systemctl start mariadb
+
+### Secure mysql installation
+mysql_secure_installation
+
+mysql -u root -p
+show databases;
+use mysql;
+select User,Host,Password from user;
+delete from user where host!='localhost';
+```
+
+
 ### Install mysql repo
 
 ```bash
