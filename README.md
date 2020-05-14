@@ -21,6 +21,10 @@ select User,Host,Password from user;
 delete from user where host!='localhost';
 ```
 
+### Show ACL Access
+```bash
+show grants for 'root'@'localhost';
+```
 
 ### Install mysql repo
 
