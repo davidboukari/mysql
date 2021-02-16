@@ -21,6 +21,11 @@ select User,Host,Password from user;
 delete from user where host!='localhost';
 ```
 
+### Create an user
+```
+CREATE USER 'newuserlogin'@'localhost' IDENTIFIED  BY 'ItAFakePasswd';
+GRANT ALL PRIVILEGES ON *.* TO 'newuserlogin'@'localhost';
+```
 ### Show ACL Access
 ```bash
 show grants for 'root'@'localhost';
