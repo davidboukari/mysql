@@ -1,5 +1,12 @@
 # mysql
 
+## Docker & kubernetes
+```
+$ docker run mysql  -e MYSQL_ROOT_PASSWORD=123 -e MYSQL_ALLOW_EMPTY_PASSWORD=no -e MYSQL_RANDOM_ROOT_PASSWORD=no
+
+$ kubectl run mysql --image=mysql --env=MYSQL_ROOT_PASSWORD=123 --env=MYSQL_ALLOW_EMPTY_PASSWORD=no --env=MYSQL_RANDOM_ROOT_PASSWORD=no
+```
+
 ## Install mysql mariadb
 
 * https://blog.microlinux.fr/mysql-centos-7/
